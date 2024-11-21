@@ -20,7 +20,7 @@ const useGetAllJobs = () => {
           dispatch(setAllJobs(res.data.jobs));
         }
       } catch (error) {
-        console.error('Error fetching jobs:', error.response?.data?.message || 'Unknown error occurred');
+        console.log(error);
       }
     };
     fetchAllJobs();
