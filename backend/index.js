@@ -18,9 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin: 'http://localhost:5173', // Your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow the methods you need
-    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+    origin: 'https://job-portal-j3.vercel.app/', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
     credentials: true, // Allow cookies and credentials
   };
 app.use(cors(corsOptions));
