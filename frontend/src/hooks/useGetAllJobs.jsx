@@ -13,7 +13,7 @@ const useGetAllJobs = () => {
       try {
         const res = await axios.get(
           `${JOB_API_END_POINT}/get${searchedQuery ? `?keyword=${searchedQuery}` : ''}`, 
-          { withCredentials: true }
+          // { withCredentials: true }
         );
 
         if (res.data.success) {
