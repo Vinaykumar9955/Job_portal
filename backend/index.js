@@ -20,18 +20,13 @@ app.use(cookieParser());
 const allowedOrigins = ['http://localhost:5173', 'https://job-portal-j3.vercel.app',"https://job-portal-j3.vercel.app"];
 
 const corsOptions = {
-    origin: (origin, callback) => {
-        if (allowedOrigins.includes(origin) || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-};
+    origin: 'https://job-portal-j3.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+    credentials: true, // Allow cookies and credentials
+  };
 app.use(cors(corsOptions));
+
 
 const PORT = process.env.PORT ||  3000;
 //api's
